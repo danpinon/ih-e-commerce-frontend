@@ -15,6 +15,7 @@ function App() {
             component={Home}
             exact
             />
+            <Route path='/search/:keyword' component={Home}/>
             <Route path = "/product/:id" component={ProductDetails} exact/>
         </div>
         <Footer/>

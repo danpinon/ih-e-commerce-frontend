@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
-// import MetaData from '../layout/MetaData'
+import MetaData from '../layout/MetaData'
 import { useDispatch, useSelector } from "react-redux";
 import { useAlert } from 'react-alert'
 import { getProductDetails, clearErrors } from "../../actions/productActions";
-// import {Carousel} from 'react-bootstrap'
+import {Carousel} from 'react-bootstrap'
 import Loader from '../layout/Loader'
 
 const ProductDetails = ({ match }) => {
@@ -12,7 +12,7 @@ const ProductDetails = ({ match }) => {
     const alert = useAlert()
     const dispatch = useDispatch()
 
-    const { loading, error, product } = useSelector(state => console.log(state.productDetails))
+    const { loading, error, product } = useSelector(state => state.productDetails)
 
     useEffect(() => {
         dispatch(getProductDetails(match.params.id))
@@ -25,18 +25,19 @@ const ProductDetails = ({ match }) => {
     }, [dispatch, alert, error, match.params.id])
     return (
         <>
+        <MetaData title={product.name}/>
         {loading ? <Loader/> : (
             <>
             {console.log(product, loading, error)}
-                <div className="row f-flex justify-content-around">
-            <div className="col-12 col-lg-5 img-fluid" id="product_image">
-                {/* <Carousel pause='hover'>
+                <div className="row f-flex justify-content-around" >
+            <div className="col-12 col-lg-5 img-fluid" id="product_image" >
+                <Carousel pause='hover'>
                     {product.images && product.images.map(image => (
-                        <Carousel.Item key={image.public.id}>
+                        <Carousel.Item key={image.public_id}>
                             <img className='d-block w-100'src={image.url} alt={product.title}/>
                         </Carousel.Item>
                     ))}
-                </Carousel> */}
+                </Carousel>
             </div>
 
             <div className="col-12 col-lg-5 mt-5">
