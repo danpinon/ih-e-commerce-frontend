@@ -11,8 +11,10 @@ import {
     LOAD_USER_FAIL,
     UPDATE_PROFILE_REQUEST,
     UPDATE_PROFILE_SUCCESS,
-    UPDATE_PROFILE_RESET,
     UPDATE_PROFILE_FAIL,
+    UPDATE_PASSWORD_REQUEST,
+    UPDATE_PASSWORD_SUCCESS,
+    UPDATE_PASSWORD_FAIL,
     LOGOUT_SUCCESS,
     LOGOUT_FAIL,
     CLEAR_ERRORS
@@ -43,8 +45,8 @@ export const login = (email, password) => async (dispatch) => {
     }
 }
 
-//REGISTER USER
-export const register = (userData) => async (dispatch) => {
+//UPDATE PROFILE USER
+export const updateProfile = (userData) => async (dispatch) => {
     try {
 
         dispatch({ type: UPDATE_PROFILE_REQUEST })
@@ -91,8 +93,8 @@ export const loadUser = () => async (dispatch) => {
     }
 }
 
-//UPDATE PROFILE USER
-export const updateProfile = (userData) => async (dispatch) => {
+//REGISTER PROFILE USER
+export const register = (userData) => async (dispatch) => {
     try {
 
         dispatch({ type: REGISTER_USER_REQUEST })
@@ -113,6 +115,33 @@ export const updateProfile = (userData) => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: REGISTER_USER_FAIL,
+            payload: error.response.data.message
+        })
+    }
+}
+
+//UPDATE PASSWORD
+export const updatePassword = (passwords) => async (dispatch) => {
+    try {
+
+        dispatch({ type: UPDATE_PASSWORD_REQUEST })
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        const { data } = await axios.post('/api/v1/password/update', passwords, config)
+
+        dispatch({
+            type: UPDATE_PASSWORD_SUCCESS,
+            payload: data.user
+        })
+
+    } catch (error) {
+        dispatch({
+            type: UPDATE_PASSWORD_FAIL,
             payload: error.response.data.message
         })
     }
