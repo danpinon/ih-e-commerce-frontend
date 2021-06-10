@@ -20,7 +20,7 @@ const Profile = () => {
             <div class="row justify-content-around mt-5 user-info">
               <div class="col-12 col-md-3">
                 <figure class="avatar avatar-profile">
-                  <img class="rounded-circle img-fluid" src={user.avatar ? '' : 'images/default_avatar.jpg'} alt="user avatar profile picture" />
+                  <img class="rounded-circle img-fluid" src={user.avatar ? '' : 'images/default_avatar.jpg'} alt="user avatar" />
                 </figure>
                 <Link
                   to="/me/update"
