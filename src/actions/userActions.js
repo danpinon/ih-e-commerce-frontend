@@ -57,7 +57,7 @@ export const updateProfile = (userData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.put('/api/v1/me/update', userData, config)
+        const { data } = await axios.put('https://shop-it-ecommerce.herokuapp.com/api/v1/me/update', userData, config)
 
         dispatch({
             type: UPDATE_PROFILE_SUCCESS,
@@ -132,7 +132,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('/api/v1/password/update', passwords, config)
+        const { data } = await axios.post('https://shop-it-ecommerce.herokuapp.com/api/v1/password/update', passwords, config)
 
         dispatch({
             type: UPDATE_PASSWORD_SUCCESS,
@@ -151,7 +151,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     try {
 
-        await axios.get('/api/v1/logout')
+        await axios.get('https://shop-it-ecommerce.herokuapp.com/api/v1/logout')
 
         dispatch({
             type: LOGOUT_SUCCESS,
