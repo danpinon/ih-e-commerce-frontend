@@ -17,9 +17,9 @@ export const getProducts = (keyword = '', currentPage = 1, price, category, rati
 
         dispatch({ type: ALL_PRODUCTS_REQUEST})
 
-        let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&ratings[gte]=${ratings}`
+        let link = `https://shop-it-ecommerce.herokuapp.com/api/v1/products?keyword=apple&category=Electronics&ratings[gte]=0/api/v1/products?keyword=${keyword}&page=${currentPage}&ratings[gte]=${ratings}`
         if(category) {
-            link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&category=${category}&ratings[gte]=${ratings}`
+            link = `https://shop-it-ecommerce.herokuapp.com/api/v1/products?keyword=apple&category=Electronics&ratings[gte]=0/api/v1/products?keyword=${keyword}&page=${currentPage}&category=${category}&ratings[gte]=${ratings}`
         }
         const { data } = await axios.get(link)
         console.log('data', data)
@@ -43,7 +43,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 
         dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/v1/product/${id}`)
+        const { data } = await axios.get(`https://shop-it-ecommerce.herokuapp.com/api/v1/product/${id}`)
 
         dispatch({
             type: PRODUCT_DETAILS_SUCCESS,
