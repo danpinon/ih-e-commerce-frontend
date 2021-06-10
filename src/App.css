@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "helvetica",sans-serif;
+  font-family: helvetica,sans-serif;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -59,7 +59,7 @@ nav {
 #view_btn {
   background-color: #febd69;
   padding: 0.4rem 1.8rem;
-  font-family: calibri;
+  font-family: helvetica,sans-serif;
 }
 
 #cart {
