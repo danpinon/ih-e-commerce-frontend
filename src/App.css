@@ -45,6 +45,16 @@ nav {
   padding: 1rem;
 }
 
+/* .btn-danger{
+  background-color: #fa9c23;
+  border-color: #fa9c23;
+}
+
+.btn-danger:hover{
+  background-color: #f8ad4a;
+  border-color: #f8b865;
+} */
+
 #login_btn,
 #view_btn {
   background-color: #febd69;
