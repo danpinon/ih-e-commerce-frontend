@@ -25,7 +25,7 @@ const Header = () => {
                     <div className="navbar-brand">
                     <Link to="/">
 
-                    <img src="/images/shopit_logo.png" alt="Logo shopit" />
+                    <img className="ml-5" src="/images/shopit_logo.png" alt="Logo shopit" style={{height: "70px"}}/>
                     </Link>
                     </div>
                 </div>

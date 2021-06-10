@@ -27,12 +27,12 @@ body {
 }
 
 nav {
-  background-color: #4f89d1;
+  background-color: #fd6183;
   padding: 1rem 1rem;
 }
 
 #search_btn {
-  background-color: #febd69;
+  background-color: #444444;
 }
 
 .input-group {
@@ -57,9 +57,9 @@ nav {
 
 #login_btn,
 #view_btn {
-  background-color: #febd69;
+  background-color: #444444;
   padding: 0.4rem 1.8rem;
-  font-family: helvetica,sans-serif;
+  font-family: calibri;
 }
 
 #cart {
@@ -68,12 +68,15 @@ nav {
 }
 
 #cart_count {
-  background-color: #febd69;
+  background-color: #444444;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 0.9rem;
+}
+.fa-search{
+  color: white;
 }
 
 /* Home page */
@@ -90,7 +93,7 @@ nav {
 }
 
 .card-title a:hover {
-  color: #fa9c23;
+  color: #444444;
   text-decoration: none;
 }
 
@@ -103,7 +106,7 @@ nav {
 }
 
 #view_btn {
-  background-color: #fa9c23;
+  background-color: #444444;
   color: white;
 }
 
@@ -136,7 +139,7 @@ footer {
 .rating-outer {
   display: inline-block;
   position: relative;
-  font-family: helvetica,sans-serif;
+  font-family: FontAwesome;
   color: #fdcc0d;
 }
 
@@ -172,7 +175,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #fa9c23;
+  background-color: #424242;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -217,8 +220,8 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
-  border-color: #fa9c23 transparent;
+  border: 6px solid #444444;
+  border-color: #444444 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -250,7 +253,7 @@ footer {
 }
 
 #card_item_price {
-  color: #febd69;
+  color: #444444;
   font-weight: bold;
   font-size: 1.4rem;
 }
@@ -264,8 +267,8 @@ footer {
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #444444;
+  border-color: #444444;
 }
 
 #order_summary {
@@ -374,7 +377,7 @@ footer {
   clear: both;
   margin: 20px auto;
   width: auto;
-  font-family: helvetica,sans-serif;
+  font-family: sans-serif;
   overflow: auto;
 }
 
