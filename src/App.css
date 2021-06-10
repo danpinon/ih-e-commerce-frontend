@@ -136,7 +136,7 @@ footer {
 .rating-outer {
   display: inline-block;
   position: relative;
-  font-family: FontAwesome;
+  font-family: helvetica,sans-serif;
   color: #fdcc0d;
 }
 
@@ -374,7 +374,7 @@ footer {
   clear: both;
   margin: 20px auto;
   width: auto;
-  font-family: sans-serif;
+  font-family: helvetica,sans-serif;
   overflow: auto;
 }
 
